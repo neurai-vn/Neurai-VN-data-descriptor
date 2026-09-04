@@ -5,17 +5,18 @@
 [![Zenodo](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.18976768-1682D4?style=for-the-badge&logo=zenodo&logoColor=white)](https://doi.org/10.5281/zenodo.18976768)
 
 <!-- --- -->
-**Version:** 1.0.3
-
-**Released Date:** September 4, 2026
 
 
 
 ## Table of Contents
 - [Abstract](#abstract)
-- [Ethical Approval](#ethical-approval)
-- [Data Record](#data-record)
-- [Notes](#notes)
+- [Folder Structure](#folder-structure)
+- [Data Installation](#data-installation)
+- [Data Sample](#data-sample)
+- [Data Availability](#data-availability)
+- [Usage Notes](#data-availability)
+- [Release History](#release-history)
+- [Contact](#contact)
 - [Citation](#citation)
 
 ---
@@ -45,7 +46,7 @@ Approval numbers: 1387/NTP-HĐĐĐ (for data collection approval at Nguyen Tri P
 - The dataset is distributed as CSV exports, and organized into two main directories: ```metadata/``` and ```participant/```
 - The folder "participant/" contains separate de-identified folder for each participant (e.g.,P0001). 
 - Each participant folder contains 16 CSV data files. Each CSV includes the common columns ```timestamp``` and ```public_id```, followed by modality-specific channels. All timestamps are reported in local time.
-- **Notes of Missing Files**: Due to technical issues from either subject's smartphone or data retrieval process, the following modalities are unavailable for the specified participants:
+- **Missing Files**: Due to technical issues from either subject's smartphone or data retrieval process, the following modalities are unavailable for the specified participants:
   - accelerometer: P0002, P0005, P0006, 
   - gyroscope: P0002, P0005, P0006, P0070, P0078, P0081
   - battery: P0002, P0005, P0006
@@ -98,7 +99,7 @@ chmod +x script/data_installer.sh
 
 ---
 
-## Data Sample
+## 4. Data Sample
 The figure below shows an example of passive sensing data collected from a real participant. The upper panels present wearable-derived signals, while the lower panels show representative smartphone sensing data.
 
 <p align="center">
@@ -111,26 +112,39 @@ Figure. Representative passive sensing data from participant P0065 collected bet
 
 ---
 
-## Data Availability 
+## 5. Data Availability 
 - The NEURAI-VN dataset can be accessed at [https://zenodo.org/records/18976768](https://zenodo.org/records/18976768) upon request.
 - Due to the sensitive nature of the human physiological and behavioral data, users must submit an access request (via Zenodo) and sign a Data Use Agreement (DUA) before downloading the dataset. Users are requested to cite the Zenodo record (DOI) in any resulting work(s).
 
 ---
 
-## Note
+## 6. Usage Notes
 - The Neurai-VN dataset is currently under submission process to *Sci. Data*. A peer-reviewed publication associated with this dataset will be linked upon publication.
 - Users are encouraged to use the dataset for research and educational purposes in multimodal machine learning and mental health digital phenotyping.
+
+---
+
+
+## 7. Release History
+
+| Version | Release Date | Changes |
+|---|---|---|
+| **1.0.3** | September 3, 2026 | Correction of some invalid smartphone data in **P0002, P0005, P0006** |
+| **1.0.2** | August 16, 2026 | Removed invalid smartphone data in **P0002, P0006, P0070, P0078, and P0081**. |
+| **1.0.1** | August 14, 2026 | Updated metadata. Corrected files and file names to ensure consistency with the manuscript. |
+| **1.0.0** | May 15, 2026 | Added `P0XXX` ZIP files containing individual participant data files. Updated metadata. |
 
 
 ---
 
-## Contact
+## 8. Contact
 - For general inquiries, please contact: [hieu.ph@vinuni.edu.vn](mailto:hieu.ph@vinuni.edu.vn)
 - For techincal issues, please contact: [24cuong.pq@vinuni.edu.vn](mailto:24cuong.pq@vinuni.edu.vn)
 
 
+---
 
-## Citation
+## 9. Citation
 
 If you use this dataset in your research, please cite the dataset on Zenodo.
 
@@ -153,6 +167,7 @@ If you use this dataset in your research, please cite the dataset on Zenodo.
   month        = sep,
   year         = 2026,
   publisher    = {Zenodo},
+  version      = {1.0.3},
   doi          = {10.5281/zenodo.22311204},
   url          = {https://doi.org/10.5281/zenodo.22311204},
 }
