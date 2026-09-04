@@ -1,13 +1,13 @@
 # A multimodal digital phenotyping dataset for depression and anxiety assessment under free-living conditions
 
-[![Version](https://img.shields.io/badge/version-1.0.1-2ea44f?style=for-the-badge)](https://github.com/neurai-vn/Neurai-VN-SciData)
+[![Version](https://img.shields.io/badge/version-1.0.3-2ea44f?style=for-the-badge)](https://github.com/neurai-vn/Neurai-VN-SciData)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC--BY%204.0-purple?style=for-the-badge)](https://creativecommons.org/licenses/by/4.0/)
 [![Zenodo](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.18976768-1682D4?style=for-the-badge&logo=zenodo&logoColor=white)](https://doi.org/10.5281/zenodo.18976768)
 
 <!-- --- -->
-**Version:** 1.0.2
+**Version:** 1.0.3
 
-**Released Date:** August 16, 2026
+**Released Date:** September 4, 2026
 
 
 
@@ -29,11 +29,14 @@ Despite affecting hundreds of millions of people globally, depression and anxiet
 </p>
 
 <p align="center"><em>
-Figure 1. Workflow for constructing the \textsc{Neurai-VN} dataset. First, a mobile application was developed for multimodal data acquisition. Next, participants were recruited, clinically screened for eligibility, and enrolled. Subsequently, data from multiple modalities were collected under real-world conditions. Finally, the collected data underwent retrieval, quality control, and serialization to generate the released dataset.
+Figure 1. Workflow for constructing the \textsc{Neurai-VN} dataset. 
 </em></p> -->
 
 **Ethical Approval:**
-This study was approved by the Institutional Review Board (IRB) of Neurology Department, Nguyen Tri Phuong Hospital, Ho Chi Minh City, Vietnam (Approval No. 1387/NTP-HDDD). 
+Institutional Review Board (IRB) of Neurology Department, Nguyen Tri Phuong Hospital, Ho Chi Minh City, Vietnam
+Approval numbers: 1387/NTP-HĐĐĐ (for data collection approval at Nguyen Tri Phuong Hospital) and 1996/NTP-HĐĐĐ (for data collection approval at Menthy Clinic).
+
+
 
 
 ---
@@ -41,8 +44,13 @@ This study was approved by the Institutional Review Board (IRB) of Neurology Dep
 ## 2. Folder Structure
 - The dataset is distributed as CSV exports, and organized into two main directories: ```metadata/``` and ```participant/```
 - The folder "participant/" contains separate de-identified folder for each participant (e.g.,P0001). 
-- Each participant folder contains 17 CSV data files, with the exception of participant P0031, whose folder does not contain the gad7.csv file.
-- Each CSV includes the common columns ```timestamp``` and ```public_id```, followed by modality-specific channels. All timestamps are reported in local time.
+- Each participant folder contains 16 CSV data files. Each CSV includes the common columns ```timestamp``` and ```public_id```, followed by modality-specific channels. All timestamps are reported in local time.
+- **Notes of Missing Files**: Due to technical issues from either subject's smartphone or data retrieval process, the following modalities are unavailable for the specified participants:
+  - accelerometer: P0002, P0005, P0006, 
+  - gyroscope: P0002, P0005, P0006, P0070, P0078, P0081
+  - battery: P0002, P0005, P0006
+  - network: P0002, P0005, P0006
+  - gad7: P0031 
 
 ```
 ├── metadata/
@@ -81,7 +89,6 @@ This study was approved by the Institutional Review Board (IRB) of Neurology Dep
 ---
 
 ## 3. Data Installation
-- The NEURAI-VN dataset (latest version) can be accessed at [https://zenodo.org/records/18976768](https://zenodo.org/records/18976768) upon request.
 - For automatic data installation, please follow the instructions below to download and extract the dataset from Zenodo. In addition, please ensure you have the necessary permissions and tools to access the dataset.
 
 ```bash
@@ -104,8 +111,16 @@ Figure. Representative passive sensing data from participant P0065 collected bet
 
 ---
 
-## Notes
-The Neurai-VN dataset is currently under submission process to *Sci. Data*. The dataset is publicly released via Zenodo to facilitate open scientific use and reproducibility. Users of these data are requested to cite the Zenodo record (DOI) in any resulting publications, presentations, software, or derivative works. A peer-reviewed publication associated with this dataset will be linked upon publication.
+## Data Availability 
+- The NEURAI-VN dataset can be accessed at [https://zenodo.org/records/18976768](https://zenodo.org/records/18976768) upon request.
+- Due to the sensitive nature of the human physiological and behavioral data, users must submit an access request (via Zenodo) and sign a Data Use Agreement (DUA) before downloading the dataset. Users are requested to cite the Zenodo record (DOI) in any resulting work(s).
+
+---
+
+## Note
+- The Neurai-VN dataset is currently under submission process to *Sci. Data*. A peer-reviewed publication associated with this dataset will be linked upon publication.
+- Users are encouraged to use the dataset for research and educational purposes in multimodal machine learning and mental health digital phenotyping.
+
 
 ---
 
@@ -120,7 +135,7 @@ The Neurai-VN dataset is currently under submission process to *Sci. Data*. The 
 If you use this dataset in your research, please cite the dataset on Zenodo.
 
 ```bibtex
-@dataset{cuong_q_pham_2026_21969065,
+@dataset{cuong_q_pham_2026_22311204,
   author       = {Cuong Q. Pham and
                   Duong T. H. Vu and
                   Long K. H. Nguyen and
@@ -135,10 +150,10 @@ If you use this dataset in your research, please cite the dataset on Zenodo.
                    depression and anxiety assessment under free-
                    living conditions
                   },
-  month        = aug,
+  month        = sep,
   year         = 2026,
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.21969065},
-  url          = {https://doi.org/10.5281/zenodo.21969065},
+  doi          = {10.5281/zenodo.22311204},
+  url          = {https://doi.org/10.5281/zenodo.22311204},
 }
 ```
